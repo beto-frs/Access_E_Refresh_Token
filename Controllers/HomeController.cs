@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace ApiAuth.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("user")]
     public class HomeController : ControllerBase
     {
