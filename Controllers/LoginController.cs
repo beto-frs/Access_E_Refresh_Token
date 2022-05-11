@@ -51,7 +51,7 @@ namespace ApiAuth.Controllers
             var savedRefreshToken = TokenService.GetRefreshToken(username);
             if (savedRefreshToken != inputRefresh.refreshToken)
             {
-                throw new SecurityTokenException("Invalid refresh");
+                throw new SecurityTokenException("Inválido Refresh");
             }
 
             var newJwtToken = TokenService.GenerateToken(principal.Claims);
